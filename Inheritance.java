@@ -1,9 +1,7 @@
-//Code to Implement concepts like Inheritance and Parameterized constructors
 package matrix;
 
 import java.util.Scanner;
 
-//==== Super class ====
 class Employee {
 	String name;
 	int age;
@@ -19,18 +17,16 @@ class Employee {
 		this.Adress = Adress;
 		this.salary = salary;
 	}
-
-	//Method to display details
+	
 	void display() {
 		System.out.println("Name -> " + name);
 		System.out.println("Age -> " + age);
 		System.out.println("Phone_no -> " + phone_no);
 		System.out.println("Adress -> " + Adress);
-	    	System.out.println("Salary -> " + salary);
+	    System.out.println("Salary -> " + salary);
 	}	
 }
 
-//==== Subclass 1 ====
 class Officer extends Employee {
 	String specialization;
 	
@@ -39,8 +35,7 @@ class Officer extends Employee {
 		super(name, age, phone_no, Adress, salary);		//Parameters of the constructor -> Officer is passed to the superclass
 		this.specialization = specialization;
 	}
-
-	//Method to print Specialization of Officer
+	
 	void disp_special() {
 		System.out.println("Specialization-> " + specialization);
 		System.out.println("----------------------------");
@@ -48,7 +43,6 @@ class Officer extends Employee {
 	}
 }
 
-//==== Subclas 2 ====
 class Manager extends Employee {
 	String department;
 	
@@ -57,8 +51,7 @@ class Manager extends Employee {
 		super(name, age, phone_no, Adress, salary);
 		this.department = department;
 	}
-
-	//Method to print Department of Manager
+	
 	void disp_dep() {
 		System.out.println("Department -> " + department);
 		System.out.println("----------------------------");
@@ -66,7 +59,6 @@ class Manager extends Employee {
 	}
 }
 
-//==== Main class ====
 public class Inheritance {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
