@@ -1,1 +1,1 @@
-﻿**KTU Java Lab work**
+﻿# KTU Java Lab work
