@@ -1,23 +1,27 @@
-package matrix;
+// package matrix;
 
 import java.util.Scanner;
 
 class Table extends Thread {
 	void printTable(int n) {
 		synchronized(this) {
-			for(int i = 0; i < n; i++) {
+			// Print Multiplication table
+			for(int i = 1; i <= 10; i++) {
 				System.out.println(n + " * " + i + " = " + n * i);
-				try {
-					Thread.sleep(3000);
-				}
-				catch (Exception e) {
-					System.out.println("Error: " + e.getMessage()); 
-				}
+			}
+
+			// To add a delay after each Thread
+			try {
+				Thread.sleep(3000);
+			}
+			catch (Exception e) {
+				System.out.println("Error: " + e.getMessage()); 
 			}
 		}
 	}
 }
 
+// --- First Thread --- //
 class MyTable1 extends Thread {
 	Table t;
 	int num;
@@ -31,6 +35,7 @@ class MyTable1 extends Thread {
 	}
 }
 
+// --- Second Thread --- //
 class MyTable2 extends Thread {
 	Table t;
 	int num;
@@ -48,12 +53,17 @@ public class TSynchronization {
 	public static void main(String[] sos) {
 		Scanner scan = new Scanner(System.in);
 		Table t1 = new Table();
-		
+		MyTable1 tab1 = new MyTable1(t1);
+		MyTable2 tab2 = new MyTable2(t1);
+
 		System.out.println("Enter number for 1st table: ");
-		int num = scan.nextInt();
-		MyTable1 tab1 = new MyTable1(num);
+		tab1.num = scan.nextInt();
 		System.out.println("Enter number for 2nd table: ");
-		scan.nextInt();
+		tab2.num = scan.nextInt();
 		
+		tab1.start();
+		tab2.start();
+
+		scan.close();
 	}
 }
