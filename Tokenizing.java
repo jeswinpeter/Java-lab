@@ -1,4 +1,5 @@
-package matrix;
+/* This code takes integers as a string and makes it tokens and converts them to int
+  	and calculates the sum of the entered integers */
 
 import java.util.StringTokenizer;
 import java.util.Scanner;
@@ -9,10 +10,13 @@ public class Tokenizing {
 		
 		int n;
 		int sum = 0;
+
 		System.out.println("Enter the integers with one space gap: ");
 		String value = scan.nextLine();
-		StringTokenizer tkns = new StringTokenizer(value);
 		
+		StringTokenizer tkns = new StringTokenizer(value);
+
+		// Tokenizing and iteger conversion
 		while(tkns.hasMoreTokens()) {
 			n = Integer.parseInt(tkns.nextToken());
 			System.out.println("Num -> " + n);
