@@ -1,4 +1,6 @@
-package matrix;
+/* This code generates a random number and if the generated number is even 
+	its square is calculated and if the num is odd its cube is calculated 
+	using Threads */
 
 import java.util.Random;
 import java.util.Scanner;
@@ -42,9 +44,11 @@ class RandomGen extends Thread {
 	public void run() {
 		try {
 			for (int i = 0; i < times; i++) {
+				//	Random num generation
 				random = rand.nextInt(limit);
 				System.out.println("Random -> " + random );
 				
+				// Odd or even checking
 				if((random % 2) == 0) {
 					EvenNum Even = new EvenNum(random); 
 					Thread t1 = new Thread(Even);
