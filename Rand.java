@@ -1,4 +1,5 @@
-package matrix;
+/* This code generates a random number and if the generated number is even 
+	its square is calculated and if the num is odd its cube is calculated */
 
 import java.util.Random;
 import java.util.Scanner;
