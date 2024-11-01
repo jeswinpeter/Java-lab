@@ -11,7 +11,6 @@ public class FileReaderWriter {
 	public static void main(String[] fin) {
 		
 		try {
-			String content;
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Enter your Keam rank: ");
 			String rank = scan.nextLine();
@@ -27,6 +26,7 @@ public class FileReaderWriter {
 			FileReader finput = new FileReader("/home/csea2/Documents/Register1.txt");
 			BufferedReader br = new BufferedReader(finput);
 			
+			String content;
 			System.out.println("The contents in the file are:");
 			while((content = br.readLine()) != null) {
 				System.out.println(content);
