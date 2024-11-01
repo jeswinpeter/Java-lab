@@ -1,8 +1,8 @@
-package matrix;
+// package matrix;
 
 import java.util.Scanner;
 
-class AgeException extends Throwable {
+class AgeException extends Exception {
 	public AgeException(String message) {
 		super(message);
 	}
@@ -20,7 +20,7 @@ public class CustomE {
 	public static void main(String[] ex) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Eligibility test for Election Voting");
-		System.out.println("Enter your age");
+		System.out.println("Enter your age: ");
 		int age = scan.nextInt();
 		try {
 			validateAge(age);
