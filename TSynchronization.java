@@ -6,7 +6,7 @@ class Table extends Thread {
 	void printTable(int n) {
 		synchronized(this) {
 			// Print Multiplication table
-			for(int i = 1; i <= 10; i++) {
+			for(int i = 1; i <= 4; i++) {
 				System.out.println(n + " * " + i + " = " + n * i);
 			}
 

@@ -1,5 +1,4 @@
 //This program implements Exception handling 
-package matrix;
 
 import java.util.Scanner;
 

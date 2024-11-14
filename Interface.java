@@ -1,5 +1,4 @@
 //This Program implements the concept of interface 
-package matrix;
 
 import java.util.Scanner;
 
@@ -49,6 +48,5 @@ public class Interface {
 		program.learn(trained,testScore);
 		program.screening(testScore);
 		program.work(testScore);
-		
 	}
 }
